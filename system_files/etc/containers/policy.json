@@ -41,7 +41,7 @@
             "ghcr.io/alistairporter": [
                 {
                     "type": "sigstoreSigned",
-                    "keyPath": "/etc/pki/containers/ublue-os.pub",
+                    "keyPath": "/etc/pki/containers/alistairporter.pub",
                     "signedIdentity": {
                         "type": "matchRepository"
                     }
