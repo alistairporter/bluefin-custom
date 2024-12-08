@@ -22,7 +22,8 @@ jobs:
   build_push:
     name: Build and push image
     runs-on: ubuntu-24.04
-
+    container:
+      options: "--security-opt label=disable --security-opt seccomp=unconfined"
     permissions:
       contents: read
       packages: write
