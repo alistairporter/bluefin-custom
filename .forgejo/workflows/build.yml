@@ -91,7 +91,7 @@ jobs:
 
       - name: install Buildah
         id: install_buildah
-        run: apt update -y && apt install buildah
+        run: apt update -y && apt install -y buildah
 
       # Build image using Buildah action
       - name: Build Image
