@@ -89,6 +89,10 @@ jobs:
             org.opencontainers.image.description=${{ env.MY_IMAGE_DESC }}
             org.opencontainers.image.title=${{ env.MY_IMAGE_NAME }}
 
+      - name: install Buildah
+        id: install_buildah
+        run: apt update -y && apt install buildah
+
       # Build image using Buildah action
       - name: Build Image
         id: build_image
