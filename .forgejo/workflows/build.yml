@@ -14,9 +14,9 @@ on:
   workflow_dispatch:
 
 env:
-  MY_IMAGE_NAME: "${{ github.event.repository.name }}"  # the name of the image produced by this build, matches repo names
+  MY_IMAGE_NAME: "${{env.GITHUB_SERVER_URL}}/${{ env.GITHUB_REPOSITORY }}"  # the name of the image produced by this build, matches repo names
   MY_IMAGE_DESC: "My Customized Universal Blue Image"
-  IMAGE_REGISTRY: "git.aporter.xyz/${{ github.repository_owner }}"  # do not edit
+  IMAGE_REGISTRY: "${{env.GITHUB_SERVER_URL}}/${{ github.repository_owner }}"  # do not edit
 
 jobs:
   build_push:
